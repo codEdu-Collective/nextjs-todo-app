@@ -1,13 +1,11 @@
-import AddTodo from '@/components/AddTodo';
-import Header from '@/components/Header';
-import TodoList from '@/components/TodoList';
+import { AddTodo, Header, TodoList } from '@/components';
 
 export default function Home() {
   return (
-    <>
+    <div>
       <Header />
       <AddTodo />
-      {/* <TodoList /> */}
-    </>
+      <TodoList />
+    </div>
   );
 }
