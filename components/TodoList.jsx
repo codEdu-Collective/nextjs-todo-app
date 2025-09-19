@@ -1,7 +1,7 @@
 import CheckBoxOutlineBlankOutlinedIcon from '@mui/icons-material/CheckBoxOutlineBlankOutlined';
 import CheckBoxOutlinedIcon from '@mui/icons-material/CheckBoxOutlined';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
-import { Grid2, IconButton, ListItem, Typography } from '@mui/material';
+import { Grid, IconButton, ListItem, Typography } from '@mui/material';
 
 import formatDate from '../helper/formatDate';
 import { getActions, deleteActions, updateActions } from '@/actions/';
@@ -13,7 +13,7 @@ const TodoList = async () => {
   const completed = todos.filter((todo) => todo.isDone);
 
   return (
-    <Grid2
+    <Grid
       container
       spacing={2}
       sx={{
@@ -22,7 +22,7 @@ const TodoList = async () => {
         mt: 3,
       }}
     >
-      <Grid2
+      <Grid
         data-test="cy-progress"
         size={{ xs: 12, sm: 10, md: 5 }}
         sx={{
@@ -83,8 +83,8 @@ const TodoList = async () => {
         ) : (
           <Typography>No Todo</Typography>
         )}
-      </Grid2>
-      <Grid2
+      </Grid>
+      <Grid
         data-test="cy-completed"
         size={{ xs: 12, sm: 10, md: 5 }}
         sx={{
@@ -155,8 +155,8 @@ const TodoList = async () => {
         ) : (
           <Typography>No Todo</Typography>
         )}
-      </Grid2>
-    </Grid2>
+      </Grid>
+    </Grid>
   );
 };
 
